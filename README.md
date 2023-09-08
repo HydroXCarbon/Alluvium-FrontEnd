@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Alluvium - AI-Powered Land Asset Prediction (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Alluvium, an AI-driven application for predicting land asset values. Please note that this README focuses on the frontend part of the application. Alluvium is a collaborative project with a dedicated team of four individuals working to harness the power of artificial intelligence in the domain of land asset valuation.
 
-## Available Scripts
+## About Alluvium
 
-In the project directory, you can run:
+Alluvium is an innovative project aimed at revolutionizing the way we predict and assess land asset values. Through the use of cutting-edge AI technologies, we seek to provide accurate and data-driven insights into the ever-evolving real estate market. Our application is designed to empower users with valuable information for making informed decisions about land investments.
 
-### `npm start`
+## Team
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Our project is a collaborative effort by a talented team of individuals who are passionate about AI and real estate. Here are the members of our team:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Purin pongpanich
+- Jiruschai Anuntabudit
+- Pisit Saejia
+- Kreakpol kobsiripat
 
-### `npm test`
+## Frontend Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This repository focuses on the frontend development of the Alluvium application. Our frontend is responsible for providing a user-friendly and interactive interface to access the AI-driven land asset predictions. We use modern web technologies to ensure a seamless user experience.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get started with the Alluvium frontend, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository to your local machine.
+2. Install any necessary dependencies using [npm](https://www.npmjs.com/):
+   ```shell
+   npm install
