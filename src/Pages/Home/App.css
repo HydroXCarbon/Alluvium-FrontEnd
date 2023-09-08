@@ -1,0 +1,661 @@
+/* 
+general 
+-------
+*/
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.container-fluid-header {
+    margin: 0 auto;
+    max-width: 1700px;
+    padding: 0 15px;
+}
+
+.ant-layout {
+    background: #fff !important;
+}
+
+.mainLayout .ant-layout-header {
+    background: black;
+    padding: 0;
+    height: auto;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bgGray {
+    background: rgb(33, 33, 33);
+}
+
+.bgLightGray {
+    background: rgb(47, 47, 47);
+}
+
+/* 
+title holder
+------------
+*/
+.titleHolder {
+    text-align: center;
+    position: relative;
+    padding: 0 0 20px;
+    margin: 0 0 40px;
+    color: white;
+}
+
+.titleHolder:after {
+    transform: translateX(-50%);
+    content: '';
+    background: grey;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 100px;
+}
+
+.titleHolder h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* 
+header
+------ 
+*/
+.ant-layout-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header {
+    align-items: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 2000;
+}
+
+.header .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header .text-button {
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    font-size: 24px;
+    padding: 25px 40px; 
+}
+
+.header .text-button1:hover {
+    color: gray !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.header .logo .fas {
+    color: white;
+    margin: 0 5px 0 0;
+    font-size: 28px;
+}
+
+.header .logo a {
+    color: #333;
+}
+
+.header .ant-anchor-wrapper {
+    background: none;
+}
+
+.header .ant-anchor {
+    display: flex;
+}
+
+.header .ant-anchor-ink {
+    display: none;
+}
+
+.css-dev-only-do-not-override-190m0jy.ant-anchor-wrapper:not(.ant-anchor-wrapper-horizontal) .ant-anchor .ant-anchor-ink {
+    background-color: rgba(44, 38, 38, 0);
+}
+
+.header .ant-anchor-link {
+    padding: 0 20px;
+    margin-right: 20px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.header .ant-anchor .ant-anchor-link-title {
+    color: white;
+}
+
+.header .ant-anchor-link .ant-anchor-link-title {
+    font-size: 25px;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active>.ant-anchor-link-title {
+    color: gray;
+}
+
+.header .ant-anchor-link:before,
+.header .ant-anchor-link:after {
+    content: '';
+    background: gray;
+    width: 2px;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 30%;
+    opacity: 0;
+    transition: all 0.3s linear;
+    transform: translateX(8px);
+}
+
+.header .ant-anchor-link:after {
+    left: auto;
+    right: 30%;
+}
+.header .ant-anchor-link.ant-anchor-link-active .ant-anchor-link-title,
+.header .ant-anchor-link:hover .ant-anchor-link-title {
+    color: gray;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:before,
+.header .ant-anchor-link:hover:before {
+    left: 1%;
+    opacity: 1;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:after,
+.header .ant-anchor-link:hover:after {
+    right: 1%;
+    opacity: 1;
+}
+
+/* ant menu */
+.header .ant-menu {
+    border: 0;
+    background: none !important;
+}
+
+.header .ant-menu li.ant-menu-item {
+    position: relative;
+    color: white;
+}
+
+.header .ant-menu li.ant-menu-item:before,
+.header .ant-menu li.ant-menu-item:after {
+    content: '';
+    background: grey;
+    width: 1px;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 30%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.header .ant-menu li.ant-menu-item:after {
+    left: auto;
+    right: 30%;
+}
+
+.header .ant-menu li.ant-menu-item,
+.header .ant-menu li.ant-menu-item-selected {
+    border: 0 !important;
+}
+
+.header .ant-menu li.ant-menu-item-selected,
+.header .ant-menu li.ant-menu-item:hover {
+    color: rgb(164, 164, 164) !important;
+    background: none;
+}
+
+.header .ant-menu li.ant-menu-item-selected:before,
+.header .ant-menu li.ant-menu-item:hover:before {
+    border-bottom-color: grey;
+    left: 0;
+    opacity: 1;
+}
+
+.header .ant-menu li.ant-menu-item-selected:after,
+.header .ant-menu li.ant-menu-item:hover:after {
+    border-bottom-color: grey;
+    right: 0;
+    opacity: 1;
+}
+
+/* 
+hero
+---- 
+*/
+.heroBlock {
+    margin-top: 50px;
+    background: url('../../assets/images/Earth.jpg') no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.heroBlock .container-fluid {
+    display: block !important;
+}
+
+.heroBlock h1 {
+    color: #fff;
+    font-size: 260px;
+    line-height: 1.6;
+    margin: 0 0 30px;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        color: transparent;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+.heroBlock p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 0.5;
+    margin: 0 0 30px;
+    display: flex;
+    justify-content: center;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+}
+
+.non-copyable {
+    user-select: none;
+}
+
+.heroBlock Button {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-font {
+    font-family: 'open sans', sans-serif;
+
+}
+
+/* 
+projects
+----- 
+*/
+
+.projectsBlock {
+    margin: 0px;
+}
+
+.projectsBlock h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.projectsBlock .ant-card-head-title {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card {
+    width: 500px;
+    height: 370px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px black;
+    transform: scale(1.05);
+    transition-delay: 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* 
+block
+----- 
+*/
+.block {
+    padding: 60px 0;
+    border-bottom: 2.5px solid Black;
+}
+
+/* 
+about
+----- 
+*/
+.aboutBlock .contentHolder {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.aboutBlock .avatarWithRole {
+    color: white;
+    font-size: 30px;
+}
+
+.aboutBlock .content {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 
+faqs
+----
+*/
+.faqBlock .ant-collapse {
+    margin: 0 0 40px;
+}
+
+.faqBlock .quickSupport {
+    text-align: center;
+    max-width: 740px;
+    margin: auto;
+}
+
+.faqBlock .fas {
+    margin: 0 10px 0 0;
+}
+
+/* 
+pricing block
+-------------
+*/
+.pricingBlock .ant-list {
+    text-align: center;
+}
+
+.pricingBlock .ant-row>div:nth-child(2) .ant-list-item {
+    box-shadow: 0 0 12px 2px black;
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+}
+
+.pricingBlock .ant-card-head-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pricingBlock .large {
+    font-size: 38px;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.pricingBlock .fab {
+    margin: 0 10px 0 0;
+}
+
+/* 
+contact
+-------
+*/
+.contactBlock .ant-form {
+    max-width: 640px;
+    margin: auto;
+}
+
+.contactBlock .ant-form textarea {
+    min-height: 120px;
+    height: 120px;
+}
+
+/* 
+footer
+------
+*/
+.ant-layout-footer {
+    background: #111 !important;
+    color: #fff !important;
+    padding: 60px 0 !important;
+    text-align: center;
+}
+
+.footer .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+.footer .fas {
+    color: white;
+    font-size: 28px;
+    margin: 0 5px 0 0;
+}
+
+.footer .logo a {
+    color: #fff;
+}
+
+.footer .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 24px;
+}
+
+.footer .socials li {
+    margin: 0 20px;
+}
+
+.footer .socials a {
+    color: #fff;
+}
+
+.footer .socials a:hover {
+    color: grey;
+}
+
+.footer .goTop:hover {
+    opacity: 0.7;
+}
+
+.footer .copyright {
+    color: white;
+}
+
+.mobileVisible {
+    display: none;
+}
+
+.mobileHidden {
+    display: block;
+}
+
+/* 
+responsive
+----------
+*/
+@media only screen and (max-width: 991px) {
+    .pricingBlock .ant-row>div:nth-child(2) .ant-list-item {
+        transform: scale(1.14);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .pricingBlock .ant-row>div:nth-child(2) .ant-list-item {
+        transform: scale(1);
+    }
+
+    .mobileVisible {
+        display: block;
+    }
+
+    .mobileHidden {
+        display: none;
+    }
+}
+
+@media (min-width: 480px) {
+
+    .heroBlock {
+        height: 55vh;
+    }
+
+    .heroBlock .responsive-text p {
+        font-size: 20px;
+    }
+
+    .heroBlock .responsive-text h1 {
+        font-size: 85px;
+    }
+
+    .aboutBlock .responsive-text p {
+        font-size: 14px;
+    }
+
+    .aboutBlock .responsive-text h1 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .heroBlock {
+        height: 60vh;
+    }
+
+    .heroBlock .responsive-text p {
+        font-size: 25px;
+    }
+
+    .heroBlock .responsive-text h1 {
+        font-size: 110px;
+    }
+
+    .aboutBlock .responsive-text p {
+        font-size: 19px;
+    }
+
+    .aboutBlock .responsive-text h1 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .heroBlock {
+        height: 69vh;
+    }
+
+    .heroBlock .responsive-text p {
+        font-size: 30px;
+    }
+
+    .heroBlock .responsive-text h1 {
+        font-size: 150px;
+    }
+
+    .aboutBlock .responsive-text p {
+        font-size: 22px;
+    }
+
+    .aboutBlock .responsive-text h1 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .heroBlock {
+        height: 80vh;
+    }
+
+    .heroBlock .responsive-text p {
+        font-size: 38px;
+    }
+
+    .heroBlock .responsive-text h1 {
+        font-size: 190px;
+    }
+
+    .aboutBlock .responsive-text p {
+        font-size: 24px;
+    }
+
+    .aboutBlock .responsive-text h1 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .header .content{
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heroBlock {
+        height: 100vh;
+    }
+
+    .heroBlock .responsive-text p {
+        font-size: 42px;
+    }
+
+    .heroBlock .responsive-text h1 {
+        font-size: 250px;
+    }
+
+    .aboutBlock .responsive-text p {
+        font-size: 26px;
+    }
+
+    .aboutBlock .responsive-text h1 {
+        font-size: 28px;
+    }
+}

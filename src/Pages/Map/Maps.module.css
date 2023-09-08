@@ -1,0 +1,189 @@
+/* 
+general 
+-------
+*/
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.containerFluid {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.containerFluidHeader {
+    margin: 0 auto;
+    max-width: 1700px;
+    padding: 0 15px;
+}
+
+.ant-layout {
+    background: #fff !important;
+}
+
+.mainLayout .ant-layout-header {
+    background: black;
+    padding: 0;
+    height: auto;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bgGray {
+    background: rgb(33, 33, 33);
+}
+
+.bgLightGray {
+    background: rgb(47, 47, 47);
+}
+
+/* 
+header
+------ 
+*/
+.ant-layout-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header {
+    align-items: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: right;
+    height: 100px;
+    width: 2000;
+}
+
+.header .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header .textButton {
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    font-size: 24px;
+    padding: 25px 40px;
+}
+
+.header .textButton:hover {
+    color: gray !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 
+sidebar
+------ 
+*/
+
+.sidebarBlock {
+    margin-top: 100px;
+}
+
+.tabs {
+    background-color: gray;
+    width: 100%;
+}
+
+.ant-tabs-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-tabs-tab {
+    background-color: #333;
+    /* Tab background color */
+    color: white;
+    /* Tab text color */
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ant-tabs-tab:hover {
+    background-color: #555;
+    /* Hovered tab background color */
+}
+
+.ant-tabs-tab-active {
+    background-color: #555;
+    /* Active tab background color */
+}
+
+/* Tab content */
+.ant-tabs-content {
+    background-color: #fff;
+    /* Content background color */
+    border-left: 1px solid #333;
+    /* Left border color for content */
+    padding: 20px;
+    flex: 1;
+}
+
+/* 
+Bingmap
+------ 
+*/
+
+/* 
+responsive
+------ 
+*/
+
+@media (min-width: 480px) {
+
+    .ResponsiveMap {
+        width: 100%;
+        height: 750px;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .ResponsiveMap {
+        width: 100%;
+        height: 850px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .ResponsiveMap {
+        width: 100%;
+        height: 950px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .ResponsiveMap {
+        width: 100%;
+        height: 1000px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .ResponsiveMap {
+        width: 100%;
+        height: 1100px;
+    }
+}
