@@ -10,10 +10,10 @@ Alluvium is an innovative project aimed at revolutionizing the way we predict an
 
 Our project is a collaborative effort by a talented team of individuals who are passionate about AI and real estate. Here are the members of our team:
 
-- Purin pongpanich
-- Jiruschai Anuntabudit
-- Pisit Saejia
-- Kreakpol kobsiripat
+- Purin pongpanich (Frontend Developer)
+- Jiruschai Anuntabudit (Team lead, Data science)
+- Pisit Saejia (Full Stack Developer)
+- Kreakpol kobsiripat (Data science)
 
 ## Frontend Development
 
