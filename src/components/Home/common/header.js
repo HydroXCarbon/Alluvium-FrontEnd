@@ -21,7 +21,7 @@ function AppHeader() {
                         Register
                     </Button>
                     <Button type="primary" className="text-button">
-                        <Link to="/maps">Login</Link> 
+                        <Link to="/maps" target="_top">Login</Link> 
                     </Button>
                 </div>
             </div>

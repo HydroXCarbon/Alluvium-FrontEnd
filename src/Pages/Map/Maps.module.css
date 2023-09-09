@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 15px;
+    
 }
 
 .containerFluidHeader {
@@ -60,9 +61,15 @@ header
     align-items: center;
     padding: 15px 0;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     height: 100px;
-    width: 2000;
+    user-select: none;
+}
+
+.header .logo{
+    color: white !important;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .header .buttons {
@@ -77,7 +84,7 @@ header
     justify-content: center;
     align-items: center;
     margin-left: auto;
-    font-size: 24px;
+    font-size: 22px;
     padding: 25px 40px;
 }
 
@@ -95,52 +102,34 @@ sidebar
     margin-top: 100px;
 }
 
-.tabs {
-    background-color: gray;
+
+.ResponsiveMap {
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.ant-tabs-left {
-    display: flex;
-    flex-direction: column;
+.MapContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.ant-tabs-tab {
-    background-color: #333;
-    /* Tab background color */
-    color: white;
-    /* Tab text color */
-    margin: 0;
-    border: none;
-    border-radius: 0;
+.SelectButtoncontainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.TopLeftButton {
+    background-color: #007bff;
+    color: #fff;
     padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-.ant-tabs-tab:hover {
-    background-color: #555;
-    /* Hovered tab background color */
-}
-
-.ant-tabs-tab-active {
-    background-color: #555;
-    /* Active tab background color */
-}
-
-/* Tab content */
-.ant-tabs-content {
-    background-color: #fff;
-    /* Content background color */
-    border-left: 1px solid #333;
-    /* Left border color for content */
-    padding: 20px;
-    flex: 1;
-}
-
-/* 
-Bingmap
------- 
-*/
 
 /* 
 responsive
@@ -174,6 +163,7 @@ responsive
 
 @media (min-width: 992px) {
 
+
     .ResponsiveMap {
         width: 100%;
         height: 1000px;
@@ -181,6 +171,7 @@ responsive
 }
 
 @media (min-width: 1200px) {
+
 
     .ResponsiveMap {
         width: 100%;

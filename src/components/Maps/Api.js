@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Component } from 'react';
 import { ReactBingmaps } from 'react-bingmaps';
 import apikey from '../../Pages/Map/apikey';
 import Style from '../../Pages/Map/Maps.module.css';
+import SelectButton from './components/select';
 
 const BingMap = () => {
   const bingMapKey = apikey;
@@ -58,13 +59,18 @@ const BingMap = () => {
 
   return (
     <div className={Style.ResponsiveMap}>
-      <ReactBingmaps
-        ref={mapRef}
-        bingmapKey={bingMapKey}
-        center={[initialLatitude, initialLongitude]}
-        zoom={9}
-        onClick={handleMapClick}
-      />
+      <div className={Style.MapContainer}>
+        <div className={Style.SelectButtoncontainer}>
+          <SelectButton />
+        </div>
+        <ReactBingmaps
+          ref={mapRef}
+          bingmapKey={bingMapKey}
+          center={[initialLatitude, initialLongitude]}
+          zoom={9}
+          onClick={handleMapClick}
+        />
+      </div>
       {selectedCoordinates && (
         <div>
           <p>Selected Rectangle Coordinates:</p>
