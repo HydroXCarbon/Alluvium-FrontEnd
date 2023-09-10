@@ -3,6 +3,10 @@ import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import Style from '../../Pages/Map/Maps.module.css';
 
+const handleLogout = () => {
+    console.log('Logout clicked');
+};
+
 function AppHeader() {
     return (
         <div className={Style.containerFluidHeader}>
@@ -17,7 +21,7 @@ function AppHeader() {
                         Profile
                     </Button>
                     <Button type="text" className={Style.textButton}>
-                        <Link to="/" target="_top">Logout</Link>
+                        <Link to="/" onClick={handleLogout} target="_top">Logout</Link>
                     </Button>
                 </div>
             </div>
