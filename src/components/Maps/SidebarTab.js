@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Tabs } from 'antd';
-import BingMap from './components/Api';
+import GoogleMap from './components/Api';
+import Result from './components/Result';
 import styles from '../../Pages/Map/Maps.module.css';
+
 
 function Sidebar() {
     const [activeTab, setActiveTab] = useState('tab1');
@@ -14,11 +16,11 @@ function Sidebar() {
         <div className={styles.sidebarBlock}>
             <div className={`${styles.tabs} ${styles.bgLightGray}`}>
                 <Tabs activeKey={activeTab} onChange={handleTabChange} tabPosition="left">
-                    <Tabs.TabPane tab="Map" key="tab1">
-                        <BingMap />
+                    <Tabs.TabPane tab={<span style={{ fontSize: '20px' }}>Map</span>} key="tab1">
+                        <GoogleMap />
                     </Tabs.TabPane>
-                    <Tabs.TabPane tab="Result" key="tab2">
-                        <p>Content for Tab 2 goes here.</p>
+                    <Tabs.TabPane tab={<span style={{ fontSize: '20px' }}>Result</span>} key="tab2">
+                        <Result />
                     </Tabs.TabPane>
                 </Tabs>
             </div>

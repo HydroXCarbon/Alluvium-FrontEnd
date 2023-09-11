@@ -2,11 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useJsApiLoader, GoogleMap, Marker, Rectangle } from '@react-google-maps/api';
 import Style from '../../../Pages/Map/Maps.module.css';
 import Selectbutton from './select';
-import { Button } from 'antd'
+import { Button, Skeleton } from 'antd'
+import useToken from '../../../hooks/useToken';
+import { useNavigate } from 'react-router-dom';
 
 const defaultCenter = { lat: 13.7563, lng: 100.5018 };
 
 function GoogleMapApp() {
+    const { token } = useToken();
+    const navigate = useNavigate();
+    
+    if (!token){
+        navigate('/');
+    }
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     });
@@ -66,8 +74,11 @@ function GoogleMapApp() {
         }
     }, [isLoaded, selectedCoordinates]);
 
+    const handleanalyzeClick = () => {
+    }
+
     if (!isLoaded) {
-        return <h1>Loading...</h1>;
+        return <Skeleton active />;
     }
 
     return (
@@ -75,6 +86,11 @@ function GoogleMapApp() {
             <div className={Style.MapControls}>
                 <div className={Style.SelectButtoncontainer}>
                     <Selectbutton />
+                </div>
+                <div className={Style.Buttoncontainer}>
+                    <Button type='primary' onClick={handleanalyzeClick}>
+                        Analyze
+                    </Button>
                 </div>
                 <GoogleMap
                     onClick={handleMapClick}
@@ -95,11 +111,6 @@ function GoogleMapApp() {
                         <Rectangle bounds={rectangleBounds} />
                     )}
                 </GoogleMap>
-                <div className={Style.Buttoncontainer}>
-                    <Button className={Style.Buttoncontainer}>
-
-                    </Button>
-                </div>
             </div>
         </div>
     );

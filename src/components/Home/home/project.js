@@ -17,31 +17,43 @@ function AppProject() {
             "description": "The availability of vast amounts of land-related data, including historical records, market trends, and environmental factors, provides a rich source for analysis. AI algorithms can process and analyze this data to generate predictive models and recommendations."
         },
         "4": {
-                "title": "Market Inefficiencies",
-                "description": "The real estate market often experiences inefficiencies, such as information asymmetry and subjective valuation. AI-based land asset prediction services can help address these inefficiencies by providing objective and data-driven insights, facilitating more accurate valuation and investment decisions."
+            "title": "Market Inefficiencies",
+            "description": "The real estate market often experiences inefficiencies, such as information asymmetry and subjective valuation. AI-based land asset prediction services can help address these inefficiencies by providing objective and data-driven insights, facilitating more accurate valuation and investment decisions."
         }
-        
+
     };
     return (
         <div id="project" className="block projectsBlock bgGray">
-            <div className="container-fluid">
+            <div className="container-fluid-card">
                 <br></br>
                 <div className="titleHolder">
                     <h2 className="custom font">We help you find your best land assets</h2>
                 </div>
                 <br></br>
                 <div className="card-section">
-                    <Card className="card" title={data[1]["title"]} bordered={false}>
-                        <p>{data[1]["description"]}</p>
+                    <Card className="card">
+                        <div className="card-content">
+                            <h2 className="card-title">{data[1]["title"]}</h2>
+                            <p className="card-description">{data[1]["description"]}</p>
+                        </div>
                     </Card>
-                    <Card className="card" title={data[2]["title"]} bordered={false}>
-                        <p>{data[2]["description"]}</p>
+                    <Card className="card">
+                        <div className="card-content">
+                            <h2 className="card-title">{data[2]["title"]}</h2>
+                            <p className="card-description">{data[2]["description"]}</p>
+                        </div>
                     </Card>
-                    <Card className="card" title={data[3]["title"]} bordered={false}>
-                        <p>{data[3]["description"]}</p>
+                    <Card className="card">
+                        <div className="card-content">
+                            <h2 className="card-title">{data[3]["title"]}</h2>
+                            <p className="card-description">{data[3]["description"]}</p>
+                        </div>
                     </Card>
-                    <Card className="card" title={data[4]["title"]} bordered={false}>
-                        <p>{data[4]["description"]}</p>
+                    <Card className="card">
+                        <div className="card-content">
+                            <h2 className="card-title">{data[4]["title"]}</h2>
+                            <p className="card-description">{data[4]["description"]}</p>
+                        </div>
                     </Card>
                 </div>
             </div>

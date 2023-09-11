@@ -1,18 +1,17 @@
-import React from "react";
+import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Style from '../../Pages/Map/Maps.module.css';
 import useToken from '../../hooks/useToken';
-import { useNavigate } from 'react-router-dom';
 
 function AppHeader() {
     const navigate = useNavigate();
-    const { setToken } = useToken();
-    
-    const handleLogout = () => {
-        setToken(null);
-        navigate('/');
+    const { removeToken } = useToken();
 
+    const handleLogout = () => {
+        removeToken();
+        navigate('/');
     };
 
     return (
@@ -27,8 +26,8 @@ function AppHeader() {
                     <Button type="text" className={Style.textButton}>
                         Profile
                     </Button>
-                    <Button type="text" className={Style.textButton}>
-                        <Link to="/" onClick={handleLogout} target="_top">Logout</Link>
+                    <Button type="text" className={Style.textButton} onClick={handleLogout}>
+                        Logout
                     </Button>
                 </div>
             </div>

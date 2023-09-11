@@ -2,16 +2,13 @@ import React from "react";
 
 function AppHero(){
     return(
-        <div id="hero" className="heroBlock">
+        <div id="hero" className="heroBlock block">
             <div className="non-copyable">
                 <div  className="responsive-text">
                     <br></br>
                     <br></br>
                     <br></br>
-                    <h1>Alluvium</h1>
-                    <br></br>
-                    <br></br>
-                    <br></br>
+                    <h1 className="Alluviumlogo">Alluvium</h1>
                     <br></br>
                     <br></br>
                     <br></br>

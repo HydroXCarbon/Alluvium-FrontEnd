@@ -1,0 +1,165 @@
+/* 
+general 
+-------
+*/
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.containerFluid {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+
+}
+
+.containerFluidHeader {
+    margin: 0 auto;
+    max-width: 1700px;
+    padding: 0 15px;
+}
+
+.ant-layout {
+    background: #fff !important;
+}
+
+.mainLayout .ant-layout-header {
+    background: black;
+    padding: 0;
+    height: auto;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bgGray {
+    background: rgb(33, 33, 33);
+}
+
+.bgLightGray {
+    background: rgb(47, 47, 47);
+}
+
+/* 
+header
+------ 
+*/
+.ant-layout-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header {
+    align-items: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    user-select: none;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 20px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.header .logo {
+    color: white !important;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* 
+Login
+------ 
+*/
+
+.loginBlock {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 87vh;
+    width: 100%;
+}
+
+.loginBlock .logintitle {
+    margin-top: 0px;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loginBlock .welcometitle {
+    margin-top: 0px;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loginBlock .loginForm .largerStyles {
+    font-size: 240px;
+    padding: 10px;
+}
+
+.loginBlock .loginForm .buttonlargerStyles {
+    font-size: 25px;
+    width: 60%;
+    height: 100%;
+}
+
+.smallloginCard {
+    background: #979696;
+    border-radius: 8px;
+    padding: 80px;
+    box-shadow: 0 0 50px 15px rgba(0, 0, 0, 0.4);
+    width: 50vh;
+}
+
+.largeloginCard {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(47, 47, 47);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 2px 2px 20px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: right;
+    width: 130vh;
+}
+
+.loginContent {
+    color: white;
+    padding: 80px 80px 80px 0;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.welcomeText {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}

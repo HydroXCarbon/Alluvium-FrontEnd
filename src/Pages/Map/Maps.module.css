@@ -66,6 +66,18 @@ header
     user-select: none;
 }
 
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 20px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    opacity: 0.2;
+}
+
 .header .logo {
     color: white !important;
     font-size: 60px;
@@ -125,15 +137,32 @@ Map
     z-index: 0;
 }
 
-.Buttoncontainer{
-
-}
-
 .SelectButtoncontainer {
     position: absolute;
     top: 15px;
     left: 200px;
     z-index: 1;
+}
+
+.Buttoncontainer{
+    position: absolute;
+    bottom: 3vh;
+    right: 10vh;
+    z-index: 1;
+}
+
+.Buttoncontainer button {
+    color: rgb(91, 86, 86);
+    background-color: white;
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.Buttoncontainer button:hover {
+    color: gray !important;
+    background-color: white !important; /* You can set a different background color if desired */
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 /* 

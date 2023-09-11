@@ -15,8 +15,14 @@ body {
     padding: 0 15px;
 }
 
-.container-fluid-header {
+.container-fluid-card{
     margin: 0 auto;
+    max-width: 1500px;
+    padding: 0 15px;
+}
+
+.container-fluid-header {
+    margin-left: 0 auto;
     max-width: 1700px;
     padding: 0 15px;
 }
@@ -26,8 +32,7 @@ body {
 }
 
 .mainLayout .ant-layout-header {
-    background: black;
-    padding: 0;
+    background: black ;
     height: auto;
     line-height: 1.6;
 }
@@ -45,6 +50,9 @@ p {
     background: rgb(47, 47, 47);
 }
 
+.non-copyable {
+    user-select: none;
+}
 /* 
 title holder
 ------------
@@ -82,6 +90,7 @@ header
     left: 0;
     right: 0;
     z-index: 999;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .header {
@@ -91,6 +100,30 @@ header
     justify-content: space-between;
     height: 100px;
 }
+
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 20px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.ant-layout-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    pointer-events: none; 
+}
+
 
 .header .buttons {
     display: flex;
@@ -200,6 +233,12 @@ header
     opacity: 1;
 }
 
+/* form */
+
+.ant-form-item-required:before {
+    display: none !important;
+}
+
 /* ant menu */
 .header .ant-menu {
     border: 0;
@@ -303,7 +342,7 @@ hero
 ---- 
 */
 .heroBlock {
-    margin-top: 50px;
+    margin-top: 25px;
     background: url('../../assets/images/Earth.jpg') no-repeat;
     background-position: 50% 100%;
     background-size: cover;
@@ -346,10 +385,6 @@ hero
     animation-duration: 10s;
 }
 
-.non-copyable {
-    user-select: none;
-}
-
 .heroBlock Button {
     display: flex;
     justify-content: center;
@@ -381,25 +416,38 @@ projects
 }
 
 .card {
-    width: 500px;
-    height: 370px;
-    margin-right: 40px;
-    margin-bottom: 0px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto; 
+    margin-bottom: 20px;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
 }
 
 .card:hover {
-    box-shadow: 0 0 10px 5px black;
-    transform: scale(1.05);
-    transition-delay: 0.2s;
-    position: relative;
+    transform: scale(1.15);
+    transition-delay: 0.3s;
+    box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4); 
     z-index: 1;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .card-section {
     display: flex;
     justify-content: space-around;
-
 }
 
 /* 
@@ -584,6 +632,38 @@ responsive
 
 @media (min-width: 480px) {
 
+    .card {
+        width: 100%;
+        max-width: 35%;
+        margin: 0 auto; 
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+    
+    .card:hover {
+        transform: scale(1.15);
+        transition-delay: 0.3s;
+        box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .card-section {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+
     .header .text-button {
         font-size: 10px;
         padding: 15px 20px; 
@@ -615,6 +695,38 @@ responsive
 }
 
 @media (min-width: 576px) {
+
+    .card {
+        width: 100%;
+        max-width: 35%;
+        margin: 0 auto; 
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+    
+    .card:hover {
+        transform: scale(1.15);
+        transition-delay: 0.3s;
+        box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .card-section {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
 
     .header .text-button {
         font-size: 15.5px;
@@ -648,6 +760,39 @@ responsive
 
 @media (min-width: 768px) {
 
+    .card {
+        width: 100%;
+        max-width: 35%;
+        margin: 0 auto; 
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+    
+    .card:hover {
+        transform: scale(1.15);
+        transition-delay: 0.3s;
+        box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .card-section {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+
     .header .text-button {
         font-size: 20px;
         padding: 25px 40px; 
@@ -680,6 +825,37 @@ responsive
 
 @media (min-width: 992px) {
 
+    .card {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto; 
+        margin-bottom: 20px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px; 
+    }
+    
+    .card:hover {
+        transform: scale(1.15);
+        transition-delay: 0.3s;
+        box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4); 
+        z-index: 1;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .card-section {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .heroBlock {
         height: 80vh;
     }
@@ -702,6 +878,37 @@ responsive
 }
 
 @media (min-width: 1200px) {
+
+    .card {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto; 
+        margin-bottom: 20px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px; 
+    }
+    
+    .card:hover {
+        transform: scale(1.15);
+        transition-delay: 0.3s;
+        box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4); 
+        z-index: 1;
+    }
+
+    .card-section {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
     .header .content{
         margin-left: 10px;

@@ -1,12 +1,30 @@
 import React from "react";
 import { Button, Anchor } from 'antd';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import useToken from '../../../hooks/useToken';
 
 const { Link: AntdLink } = Anchor;
 
 function AppHeader() {
+    const navigate = useNavigate();
     const { token } = useToken();
+
+    const handleRegister = () => {
+        if (!token) {
+            navigate("/register");
+        } else {
+            navigate("/maps");
+        }
+    }
+
+    const handleLogin = () => {
+        if (!token) {
+            navigate("/login");
+        } else {
+            navigate("/maps");
+        }
+    }
+
 
     return (
         <div className="container-fluid-header">
@@ -20,19 +38,11 @@ function AppHeader() {
                     </Anchor>
                 </div>
                 <div className="buttons">
-                    <Button type="text" className="text-button text-button1">
-                        {token ? (
-                            <Link to="/maps" target="_top">Register</Link>
-                        ) : (
-                            <Link to="/register" target="_top">Register</Link>
-                        )}
+                    <Button type="text" className="text-button text-button1" onClick={handleRegister}>
+                        Register
                     </Button>
-                    <Button type="primary" className="text-button">
-                        {token ? (
-                            <Link to="/maps" target="_top">Login</Link>
-                        ) : (
-                            <Link to="/login" target="_top">Login</Link>
-                        )}
+                    <Button type="primary" className="text-button" onClick={handleLogin}>
+                        Login
                     </Button>
                 </div>
             </div>
