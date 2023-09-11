@@ -125,20 +125,15 @@ Map
     z-index: 0;
 }
 
+.Buttoncontainer{
+
+}
+
 .SelectButtoncontainer {
     position: absolute;
     top: 15px;
     left: 200px;
     z-index: 1;
-}
-
-.TopLeftButton {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 /* 

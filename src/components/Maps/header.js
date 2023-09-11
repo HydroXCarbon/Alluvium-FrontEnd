@@ -2,12 +2,19 @@ import React from "react";
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import Style from '../../Pages/Map/Maps.module.css';
-
-const handleLogout = () => {
-    console.log('Logout clicked');
-};
+import useToken from '../../hooks/useToken';
+import { useNavigate } from 'react-router-dom';
 
 function AppHeader() {
+    const navigate = useNavigate();
+    const { setToken } = useToken();
+    
+    const handleLogout = () => {
+        setToken(null);
+        navigate('/');
+
+    };
+
     return (
         <div className={Style.containerFluidHeader}>
             <div className={Style.header}>
