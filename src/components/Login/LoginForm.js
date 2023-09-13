@@ -13,6 +13,7 @@ const LoginForm = () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_WEB_DOMAIN}/user/login`, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },

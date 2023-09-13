@@ -113,6 +113,7 @@ function GoogleMapApp() {
 
             const response = await fetch(`${process.env.REACT_APP_WEB_DOMAIN}/predict`, {
                 method: "POST",
+                mode: 'no-cors',
                 headers: {
                     "Content-Type": "application/json",
                 },
