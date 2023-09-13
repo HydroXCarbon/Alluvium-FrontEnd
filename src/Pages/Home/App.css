@@ -217,6 +217,10 @@ header
     color: gray;
 }
 
+:where(.css-190m0jy).ant-anchor-wrapper:not(.ant-anchor-wrapper-horizontal) .ant-anchor .ant-anchor-ink.ant-anchor-ink-visible {
+    display: none;
+}
+
 .header .ant-anchor-link:before,
 .header .ant-anchor-link:after {
     content: '';
