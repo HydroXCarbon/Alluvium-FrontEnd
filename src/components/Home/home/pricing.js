@@ -3,46 +3,50 @@ import React from "react";
 import { Card,List,Button } from "antd";
 
 const data = [
-    {
-      title: 'Basic',
-      content: [
-        {
-          price: '£29.99',
-          space: '1 GB of space',
-          user: '1 user',
-          support: '24/7 support',
-          backup: 'Safe, reliable backup',
-          access: 'Access from anywhere'
-        }
-      ]
-    },
-    {
-      title: 'Premium',
-      content: [
-        {
-          price: '£59.99',
-          space: '5 GB of space',
-          user: '5 users',
-          support: '24/7 support',
-          backup: 'Safe, reliable backup',
-          access: 'Access from anywhere'
-        }
-      ]
-    },
-    {
-      title: 'Enterprise',
-      content: [
-        {
-          price: '£99.99',
-          space: 'Unlimited space',
-          user: '15 users',
-          support: '24/7 support',
-          backup: 'Safe, reliable backup',
-          access: 'Access from anywhere'
-        }
-      ]
-    }
-  ];
+  {
+    title: 'Pay as you go',
+    description: 'Ideal for small-scale usage',
+    content: [
+      {
+        value_1: '10฿ per request',
+        value_2: 'Land asset prediction',
+        value_3: 'Basic model',
+        value_4: 'Real estate predictions',
+        value_5: 'Easy to use',
+        value_6: 'Suitable for beginners'
+      }
+    ]
+  },
+  {
+    title: 'Subscription',
+    description: 'Great for regular usage',
+    content: [
+      {
+        value_1: '2,499฿ per month',
+        value_2: '3000 requests per month',
+        value_3: 'After that 5 baht per request',
+        value_4: 'Advanced predictions',
+        value_5: 'Flexible monthly plan',
+        value_6: 'Tailored for your needs'
+      }
+    ]
+  },
+  {
+    title: 'Enterprise',
+    description: 'For large-scale and professional use',
+    content: [
+      {
+        value_1: '120,000฿ per month',
+        value_2: 'Unlimited requests',
+        value_3: 'Access to every model',
+        value_4: 'Comprehensive analysis',
+        value_5: 'Tailored for enterprise needs',
+        value_6: ''
+      }
+    ]
+  }
+];
+
 
 function AppPricing(){
     return(
@@ -65,12 +69,12 @@ function AppPricing(){
                 renderItem={(item) => (
                     <List.Item>
                     <Card title={item.title}>
-                        <p className="large">{item.content[0].price}</p>
-                        <p>{item.content[0].space}</p>
-                        <p>{item.content[0].user}</p>
-                        <p>{item.content[0].support}</p>
-                        <p>{item.content[0].backup}</p>
-                        <p>{item.content[0].access}</p>
+                        <p className="large">{item.content[0].value_1}</p>
+                        <p>{item.content[0].value_2}</p>
+                        <p>{item.content[0].value_3}</p>
+                        <p>{item.content[0].value_4}</p>
+                        <p>{item.content[0].value_5}</p>
+                        <p>{item.content[0].value_6}</p>
                         <Button type="primary" size="large">
                             Get Started
                         </Button>

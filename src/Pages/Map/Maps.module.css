@@ -72,7 +72,7 @@ header
     left: 0;
     right: 0;
     top: 100%;
-    height: 20px; 
+    height: 20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     pointer-events: none;
     opacity: 0.2;
@@ -123,9 +123,6 @@ Map
     position: relative;
     width: 100%;
     height: 85vh;
-}
-
-.MapControls {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,25 +141,170 @@ Map
     z-index: 1;
 }
 
-.Buttoncontainer{
+.Buttoncontainer {
     position: absolute;
     bottom: 3vh;
-    right: 10vh;
+    right: 50%;
+    bottom: 5%;
     z-index: 1;
 }
 
 .Buttoncontainer button {
     color: rgb(91, 86, 86);
     background-color: white;
-    font-size: 25px;
-    width: 100%;
-    height: 100%;
+    font-size: 30px;
+    width: 150%;
+    height: 150%;
 }
 
 .Buttoncontainer button:hover {
-    color: gray !important;
-    background-color: white !important; /* You can set a different background color if desired */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    color: rgb(110, 110, 110) !important;
+    background-color: white !important;
+    transform: scale(1.05);
+}
+
+/* 
+Result
+------ 
+*/
+
+.resultBlock {
+    margin-top: 15px;
+    background-color: none;
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultCard {
+    margin-bottom: 30px;
+    background: white;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.resultCard:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 20px 16px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.resultBlock .title {
+    margin-top: 0;
+    margin-bottom: 2.5vh;
+    color: white;
+    font-size: 100px;
+}
+
+.cardBlock {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.DownloadMap {
+    margin-left: 3vh;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.dataContainer {
+    margin-right: 3vh;
+    background-color: none;
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-self: space-around;
+}
+
+.scoreContainer {
+    margin-top: 10px;
+}
+
+.scoreContainer h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.scoreContainer h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.scoreContainer p {
+    margin-left: 15px;
+}
+
+.advantagedisadvantagecontainer {
+    flex-grow: 1;
+    margin-left: 4vh;
+    background-color: none;
+    height: 90%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.advantagedisadvantagecontainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.advantagedisadvantagecontainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.advantagedisadvantagecontainer {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #fff;
+}
+
+.advantagedisadvantagecontainer::-webkit-scrollbar-track {
+    background: white;
+}
+
+.advantagedisadvantagecontainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.advantagedisadvantagecontainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.advantageData {}
+
+.disadvantageData {}
+
+.noHistoryCard {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+    align-items: center;
+}
+
+.noHistoryCard p {
+    font-size: 100px;
+    color: #333;
+    margin: 0;
 }
 
 /* 

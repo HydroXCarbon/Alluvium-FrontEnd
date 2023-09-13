@@ -15,7 +15,7 @@ function Maps() {
             <Content>
                 <Sidebar />
             </Content>
-            <Footer>
+            <Footer style={{ position: 'relative' }}>
                 <AppFooter />
             </Footer>
         </Layout>

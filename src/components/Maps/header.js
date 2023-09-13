@@ -12,6 +12,7 @@ function AppHeader() {
     const handleLogout = () => {
         removeToken();
         navigate('/');
+        window.scrollTo(0, 0);
     };
 
     return (

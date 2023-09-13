@@ -12,16 +12,20 @@ function AppHeader() {
     const handleRegister = () => {
         if (!token) {
             navigate("/register");
+            window.scrollTo(0, 0);
         } else {
             navigate("/maps");
+            window.scrollTo(0, 0);
         }
     }
 
     const handleLogin = () => {
         if (!token) {
             navigate("/login");
+            window.scrollTo(0, 0);
         } else {
             navigate("/maps");
+            window.scrollTo(0, 0);
         }
     }
 

@@ -5,7 +5,7 @@ return(
      <div className="container-fluid">
         <div className="footer">
             <div className="custom-font non-copyable">
-                <h2 style={{ fontSize: '30px' }}>Alluvium</h2>
+                <h2 style={{ marginTop: '20px',fontSize: '40px' }}>Alluvium</h2>
             </div>
             <ul className="socials">
                 <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>

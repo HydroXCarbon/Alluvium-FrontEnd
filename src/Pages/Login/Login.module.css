@@ -13,7 +13,6 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 15px;
-
 }
 
 .containerFluidHeader {
@@ -72,7 +71,7 @@ header
     left: 0;
     right: 0;
     top: 100%;
-    height: 20px; 
+    height: 20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     pointer-events: none;
     opacity: 0.2;
@@ -96,15 +95,9 @@ Login
     justify-content: center;
     height: 87vh;
     width: 100%;
-}
-
-.loginBlock .logintitle {
-    margin-top: 0px;
-    font-size: 60px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    background: url('../../assets/images/Earth_3.jpg') no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
 }
 
 .loginBlock .welcometitle {
@@ -116,8 +109,25 @@ Login
     text-align: center;
 }
 
+.loginBlock .welcometext {
+    margin-top: 0px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loginBlock .logintitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .loginBlock .loginForm .largerStyles {
-    font-size: 240px;
+    font-size: 24px;
     padding: 10px;
 }
 
@@ -128,23 +138,38 @@ Login
 }
 
 .smallloginCard {
-    background: #979696;
+    border: 3px solid #a5a5a5;
+    background: #bfbebe;
     border-radius: 8px;
-    padding: 80px;
     box-shadow: 0 0 50px 15px rgba(0, 0, 0, 0.4);
-    width: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+}
+
+.smallloginCard h1 {
+    font-size: 100%;
+}
+
+.smallloginCard .Form {
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .largeloginCard {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border: 3px solid #363535;
+    margin: auto;
     background: rgb(47, 47, 47);
     border-radius: 8px;
     padding: 30px;
     box-shadow: 2px 2px 20px 20px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: right;
-    width: 130vh;
+    justify-content: center;
+    width: auto;
 }
 
 .loginContent {
@@ -154,12 +179,152 @@ Login
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
+}
+
+.loginButtonContainer {
+    flex: 1;
+    margin-top: 30px;
+    height: 5vh;
+    width: 100%;
 }
 
 .welcomeText {
     color: white;
     font-size: 24px;
     text-align: center;
+}
+
+/* 
+responsive
+------ 
+*/
+
+@media (min-width: 480px) {
+
+    .largeloginCard {
+        width: 30vh;
+    }
+
+    .loginContent {
+        display: none;
+    }
+
+    .loginBlock .logintitle {
+        font-size: 50px;
+    }
+
+    .loginBlock .largerStyles {
+        font-size: 10px;
+    }
+
+    .smallloginCard {
+        flex: 1;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .largeloginCard {
+        width: 35vh;
+    }
+    .loginContent {
+        display: none;
+    }
+
+    .loginBlock .logintitle {
+        font-size: 60px;
+    }
+
+    .loginBlock .largerStyles {
+        font-size: 10px;
+    }
+
+    .smallloginCard {
+        flex: 1;
+    }
+
+    .loginButtonContainer {
+        height: 3vh;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .largeloginCard {
+        width: auto;
+    }
+
+    .loginContent {
+        display: flex;
+    }
+
+    .loginBlock .logintitle {
+        font-size: 50px;
+    }
+
+    .loginBlock .welcometext {
+        font-size: 25px;
+    }
+
+    .loginBlock .welcometitle {
+        font-size: 45px;
+    }
+
+    .loginBlock .largerStyles {
+        font-size: 10px;
+    }
+
+    .loginButtonContainer {
+        height: 3vh;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .loginBlock .logintitle {
+        font-size: 70px;
+    }
+
+    .loginBlock .welcometext {
+        font-size: 30px;
+    }
+
+    .loginBlock .welcometitle {
+        font-size: 65px;
+    }
+
+    .loginBlock .largerStyles {
+        font-size: 15px;
+    }
+
+    .loginButtonContainer {
+        height: 4vh;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .loginBlock .logintitle {
+        font-size: 80px;
+    }
+
+    .loginBlock .welcometext {
+        font-size: 30px;
+    }
+
+    .loginBlock .welcometitle {
+        font-size: 65px;
+    }
+
+    .loginBlock .largerStyles {
+        font-size: 20px;
+    }
+
+    .loginButtonContainer {
+        height: 5vh;
+    }
 }
