@@ -17,7 +17,7 @@ function Result() {
     }
     console.log('result', result);
     console.log('data', data);
-  }, [result]);
+  }, [data]);
 
   const first10Items = data;
 

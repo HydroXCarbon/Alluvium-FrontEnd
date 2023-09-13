@@ -116,6 +116,13 @@ const RegistrationForm = () => {
                 >
                   Register
                 </Button>
+                <Button
+                  type="text"
+                  onClick={handletologin}
+                  className={Style.button}
+                >
+                  already have an account?
+                </Button>
               </Form.Item>
             </Form>
           </div>

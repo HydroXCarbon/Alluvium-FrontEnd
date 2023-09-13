@@ -137,6 +137,9 @@ register
     font-size: 24px;
     text-align: center;
 }
+  .button:hover {
+    background: none !important;
+  }
 
 /* 
 responsive
