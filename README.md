@@ -27,3 +27,6 @@ To get started with the Alluvium frontend, follow these steps:
 2. Install any necessary dependencies using [npm](https://www.npmjs.com/):
    ```shell
    npm install
+3. Once the dependencies are installed, start the application with:
+   ```shell
+   npm start
